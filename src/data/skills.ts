@@ -1,0 +1,86 @@
+import { SkillCategoryGroup } from '@/types';
+
+export const skillCategories: SkillCategoryGroup[] = [
+  {
+    id: 'frontend',
+    title: 'Frontend',
+    description: 'Component-driven user interfaces, responsive design, and typed modern architectures.',
+    skills: [
+      'React.js',
+      'Next.js',
+      'TypeScript',
+      'JavaScript',
+      'Tailwind CSS',
+      'Bootstrap',
+      'HTML',
+    ],
+  },
+  {
+    id: 'backend',
+    title: 'Backend',
+    description: 'Server runtime, modular routing, and clean RESTful service design.',
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST API Design & Integration',
+      'Socket.io',
+      'WebRTC',
+    ],
+  },
+  {
+    id: 'database',
+    title: 'Database',
+    description: 'Document schema architecture, aggregation pipelines, and Mongoose ODM modeling.',
+    skills: [
+      'MongoDB',
+      'Mongoose ODM',
+      'Schema Design',
+      'Aggregation',
+    ],
+  },
+  {
+    id: 'auth-payments',
+    title: 'Authentication & Payments',
+    description: 'Secure token authentication, password hashing, and payment gateway checkout pipelines.',
+    skills: [
+      'JWT',
+      'Bcrypt',
+      'Razorpay',
+      'Stripe',
+    ],
+  },
+  {
+    id: 'tools-deployment',
+    title: 'Tools & Deployment',
+    description: 'Development environment, cloud instances, and automated redeployments.',
+    skills: [
+      'Git',
+      'GitHub',
+      'VS Code',
+      'Postman',
+      'Vercel',
+      'Render',
+      'Docker',
+      'AWS EC2',
+      'PM2',
+      'MobaXterm',
+      'CI-based redeployments',
+    ],
+  },
+  {
+    id: 'genai',
+    title: 'Generative AI / LLM',
+    description: 'LLM orchestration, Retrieval-Augmented Generation (RAG), vector embeddings, and prompt architecture.',
+    skills: [
+      'LLMs',
+      'Tokenization',
+      'Context Window',
+      'Temperature',
+      'Prompt Engineering',
+      'RAG',
+      'Embeddings',
+      'Streaming Responses',
+      'Hallucination Awareness & Mitigation',
+    ],
+  },
+];

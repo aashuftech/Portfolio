@@ -1,0 +1,69 @@
+@import './typography.css';
+@import './glassmorphism.css';
+
+:root {
+  --bg-canvas: #08090E;
+  --bg-surface: #11131C;
+  --bg-elevated: #181B28;
+  --color-primary: #6366F1;
+  --color-cyan: #06B6D4;
+  --color-emerald: #10B981;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(99, 102, 241, 0.35);
+}
+
+.light {
+  --bg-canvas: #FAFAFC;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #F3F4F8;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-glow: rgba(79, 70, 229, 0.25);
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Base custom scrollbar behavior for Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090E;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}

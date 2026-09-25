@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Aashish Prajapati | MERN Stack Developer</title>
+    <meta name="title" content="Aashish Prajapati | MERN Stack Developer" />
+    <meta name="description" content="Aashish Prajapati — Full Stack Web Developer specializing in React.js, Next.js, Node.js, Express.js, MongoDB, TypeScript, and AI/LLM integrations." />
+    <meta name="theme-color" content="#090A0F" />
+
+    <!-- Google Fonts: Baumans, Train One, Instrument Sans, Inter, IBM Plex Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('portfolio_theme');
+          if (stored === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aashish Prajapati",
+        "jobTitle": "MERN Stack Developer",
+        "url": "https://github.com/aashuftech",
+        "sameAs": [
+          "https://github.com/aashuftech",
+          "https://www.linkedin.com/in/aashish-prajapati-fullstack/"
+        ],
+        "knowsAbout": [
+          "React.js",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "TypeScript",
+          "REST APIs",
+          "Generative AI",
+          "RAG"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-canvas text-slate-100 antialiased selection:bg-brand-indigo/30 selection:text-brand-cyan min-h-screen overflow-x-hidden font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
