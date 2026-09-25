@@ -29,7 +29,7 @@ export const FloatingDock: React.FC = () => {
             href="#home"
             onClick={handleHomeClick}
             className="font-navbar-brand text-xl sm:text-2xl md:text-3xl text-white tracking-wide hover:text-brand-cyan transition-colors select-none truncate max-w-[240px] sm:max-w-none"
-            style={{ fontFamily: '"Baumans", cursive, sans-serif', fontWeight: 400 }}
+            style={{ fontFamily: '"Instrument Sans", system-ui, sans-serif', fontWeight: 400 }}
           >
             {siteConfig.name}
           </a>
