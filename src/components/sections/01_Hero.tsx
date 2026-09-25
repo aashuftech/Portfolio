@@ -8,6 +8,16 @@ export interface HeroSectionProps {
   isReady?: boolean;
 }
 
+const techIcons = [
+  { name: 'JavaScript', src: '/assets/images/tech-icons/js-icon.png' },
+  { name: 'Node.js', src: '/assets/images/tech-icons/node-icon.png' },
+  { name: 'React.js', src: '/assets/images/tech-icons/react-icon.png' },
+  { name: 'Tailwind CSS', src: '/assets/images/tech-icons/tailwind-icon.png' },
+  { name: 'HTML', src: '/assets/images/tech-icons/html-icon.webp' },
+  { name: 'MongoDB', src: '/assets/images/tech-icons/mongodb-icon.png' },
+  { name: 'AI', src: '/assets/images/tech-icons/ai-icon.png' },
+];
+
 export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
   return (
     <section
@@ -160,34 +170,41 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
       {/* SINGLE DECORATIVE MARQUEE BAND (BETWEEN HERO BUTTONS & WHAT I BRING) */}
       <div
         aria-hidden="true"
-        className="w-full max-w-full overflow-hidden select-none pointer-events-none mt-12 sm:mt-16 pt-2 pb-1 opacity-[0.16]"
-        style={{
-          contain: 'paint',
-          width: '100%',
-          maxWidth: '100%',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 92%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 92%, transparent 100%)',
-        }}
+        className="w-full max-w-full overflow-hidden select-none mt-10 sm:mt-14 py-4"
       >
-        <div className="w-full max-w-full overflow-hidden flex" style={{ width: '100%', maxWidth: '100%' }}>
+        <div className="w-full max-w-full overflow-hidden flex">
           <motion.div
-            className="flex whitespace-nowrap will-change-transform shrink-0"
+            className="flex whitespace-nowrap will-change-transform shrink-0 items-center gap-6 sm:gap-8 md:gap-10 pr-6 sm:pr-8 md:pr-10"
             animate={{ x: ['0%', '-50%'] }}
             transition={{
               ease: 'linear',
-              duration: 15,
+              duration: 28,
               repeat: Infinity,
               repeatType: 'loop',
             }}
           >
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <span
-                key={i}
-                className="font-marquee-display text-[clamp(1.75rem,4.5vw,4.25rem)] font-normal tracking-widest text-slate-100 uppercase pr-8 sm:pr-14 leading-none select-none shrink-0"
-                style={{ fontFamily: '"Train One", cursive, sans-serif' }}
-              >
-                MERN STACK DEVELOPER
-              </span>
+            {[1, 2, 3, 4].map((setIdx) => (
+              <React.Fragment key={setIdx}>
+                <span
+                  className="font-marquee-display text-[clamp(1.75rem,4.5vw,4.25rem)] font-normal tracking-widest text-slate-100/30 uppercase leading-none select-none shrink-0"
+                  style={{ fontFamily: '"Train One", cursive, sans-serif' }}
+                >
+                  MERN STACK DEVELOPER
+                </span>
+
+                {techIcons.map((tech, idx) => (
+                  <div
+                    key={`${tech.name}-${setIdx}-${idx}`}
+                    className="w-14 sm:w-16 md:w-20 lg:w-24 h-12 sm:h-14 md:h-16 flex items-center justify-center shrink-0 group/icon cursor-pointer"
+                  >
+                    <img
+                      src={tech.src}
+                      alt={tech.name}
+                      className="max-h-full max-w-full w-auto h-auto object-contain rounded-lg sm:rounded-xl shrink-0 transition-all duration-300 ease-out group-hover/icon:brightness-125 group-hover/icon:drop-shadow-[0_0_18px_rgba(99,102,241,0.65)] group-hover/icon:scale-[1.04]"
+                    />
+                  </div>
+                ))}
+              </React.Fragment>
             ))}
           </motion.div>
         </div>
