@@ -43,10 +43,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onSelectProje
   return (
     <div
       onClick={handleCardClick}
-      className="cursor-pointer"
+      className="cursor-pointer w-full"
       data-cinematic-card
     >
-      <BentoCard className="flex flex-col justify-between border-white/10 hover:border-white/20 p-6 sm:p-7 group overflow-hidden transition-all duration-300">
+      <BentoCard className="flex flex-col justify-between border-white/10 hover:border-white/20 p-5 sm:p-7 group overflow-hidden transition-all duration-300">
         <div>
           {/* Large Project Image */}
           <div
@@ -61,12 +61,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onSelectProje
           </div>
 
           {/* Project Name */}
-          <h3 className="text-xl sm:text-2xl font-display font-bold text-white mb-2.5 tracking-tight group-hover:text-brand-cyan transition-colors">
+          <h3 className="text-xl sm:text-2xl font-display font-bold text-white mb-2.5 tracking-tight group-hover:text-brand-cyan transition-colors break-words">
             {project.name}
           </h3>
 
           {/* Short Project Description */}
-          <p className="text-sm text-slate-300 font-sans leading-relaxed">
+          <p className="text-sm text-slate-300 font-sans leading-relaxed break-words">
             {project.description}
           </p>
 
@@ -106,7 +106,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onSelectProje
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center justify-between gap-3" onClick={(e) => e.stopPropagation()}>
+          <div className="flex flex-wrap items-center justify-between gap-2.5 sm:gap-3" onClick={(e) => e.stopPropagation()}>
             <Button
               variant="glass"
               size="sm"
@@ -152,7 +152,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onSelectProje
 
 export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProject }) => {
   return (
-    <section id="projects" className="relative py-10 sm:py-12 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 scroll-mt-20">
+    <section id="projects" className="relative py-10 sm:py-12 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 scroll-mt-20 w-full">
       {/* Section Header */}
       <div data-cinematic-header className="mb-7 sm:mb-8">
         <span data-cinematic-eyebrow className="text-xs font-mono text-brand-cyan uppercase tracking-widest block mb-2">
@@ -164,7 +164,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
         {projectsData.map((project, idx) => (
           <ProjectCard
             key={project.id}
@@ -177,3 +177,4 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
     </section>
   );
 };
+

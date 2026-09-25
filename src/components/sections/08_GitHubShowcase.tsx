@@ -9,7 +9,7 @@ import { GithubIcon } from '@/components/ui/Icons';
 
 export const GitHubShowcase: React.FC = () => {
   return (
-    <section id="github" className="relative py-10 sm:py-12 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10">
+    <section id="github" className="relative py-10 sm:py-12 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 w-full">
       {/* Section Header */}
       <div data-cinematic-header className="mb-7 sm:mb-8">
         <span data-cinematic-eyebrow className="text-xs font-mono text-brand-cyan uppercase tracking-widest block mb-2">
@@ -27,17 +27,17 @@ export const GitHubShowcase: React.FC = () => {
             key={project.id}
             data-cinematic-card
           >
-            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-6 sm:p-7">
+            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-5 sm:p-7">
               <div>
-                <div className="flex items-center gap-2 text-xs font-mono text-brand-cyan mb-3">
-                  <GitBranch className="w-3.5 h-3.5" />
-                  <span>aashuftech/{project.name.toLowerCase().replace(/[^a-z0-9]/g, '')}</span>
+                <div className="flex items-center gap-2 text-xs font-mono text-brand-cyan mb-3 min-w-0">
+                  <GitBranch className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">aashuftech/{project.name.toLowerCase().replace(/[^a-z0-9]/g, '')}</span>
                 </div>
 
-                <h3 className="text-lg font-display font-bold text-white mb-2 tracking-tight">
+                <h3 className="text-lg font-display font-bold text-white mb-2 tracking-tight break-words">
                   {project.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 font-sans mb-5 leading-relaxed line-clamp-2">
+                <p className="text-xs sm:text-sm text-slate-300 font-sans mb-5 leading-relaxed line-clamp-2 break-words">
                   {project.description}
                 </p>
 
@@ -73,32 +73,32 @@ export const GitHubShowcase: React.FC = () => {
 
       {/* GitHub Callout Card */}
       <div data-cinematic-card>
-        <BentoCard className="border-white/8 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-4 text-center sm:text-left">
-          <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/10 text-white shrink-0">
-            <GithubIcon size={24} />
+        <BentoCard className="border-white/8 p-5 sm:p-7 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+          <div className="flex items-start sm:items-center gap-3.5 sm:gap-4 text-left">
+            <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/10 text-white shrink-0">
+              <GithubIcon size={24} />
+            </div>
+            <div className="min-w-0">
+              <h3 className="text-lg font-display font-bold text-white mb-1 break-words">
+                Explore More on GitHub
+              </h3>
+              <p className="text-sm text-slate-300 font-sans break-words">
+                Review source code, branches, and full-stack implementations at @aashuftech.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-lg font-display font-bold text-white mb-1">
-              Explore More on GitHub
-            </h3>
-            <p className="text-sm text-slate-300 font-sans">
-              Review source code, branches, and full-stack implementations at @aashuftech.
-            </p>
-          </div>
-        </div>
 
-        <Button
-          variant="primary"
-          size="md"
-          onClick={() => window.open(siteConfig.github, '_blank')}
-          className="shrink-0"
-        >
-          <GithubIcon size={16} />
-          <span>Visit GitHub Profile</span>
-          <ExternalLink className="w-3.5 h-3.5" />
-        </Button>
-      </BentoCard>
+          <Button
+            variant="primary"
+            size="md"
+            onClick={() => window.open(siteConfig.github, '_blank')}
+            className="w-full sm:w-auto shrink-0"
+          >
+            <GithubIcon size={16} />
+            <span>Visit GitHub Profile</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </Button>
+        </BentoCard>
       </div>
     </section>
   );

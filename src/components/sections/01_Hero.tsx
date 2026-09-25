@@ -14,18 +14,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
   return (
     <section
       id="home"
-      className="relative pt-28 sm:pt-32 pb-2 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 overflow-hidden"
+      className="relative pt-24 sm:pt-32 pb-2 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 overflow-hidden w-full"
     >
       {/* TWO-COLUMN HERO GRID */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         {/* LEFT COLUMN: Editorial Text & CTAs */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left">
+        <div className="lg:col-span-7 flex flex-col items-start text-left w-full">
           {/* Large Editorial Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ duration: 0.5 }}
-            className="text-fluid-hero text-white mb-6 tracking-[-0.025em] font-display"
+            className="text-fluid-hero text-white mb-6 tracking-[-0.025em] font-display w-full"
           >
             Building modern, scalable web products with the{' '}
             <span className="inline-block font-semibold">
@@ -114,7 +114,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
             initial={{ opacity: 0, y: 15 }}
             animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="text-fluid-body text-slate-300 font-sans mb-8 leading-relaxed max-w-xl"
+            className="text-fluid-body text-slate-300 font-sans mb-8 leading-relaxed max-w-xl break-words"
           >
             {siteConfig.bio}
           </motion.p>
@@ -124,7 +124,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
             initial={{ opacity: 0, y: 15 }}
             animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="flex items-center gap-3.5 sm:gap-4"
+            className="flex items-center gap-3.5 sm:gap-4 flex-wrap"
           >
             <Button
               variant="primary"
@@ -166,12 +166,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={isReady ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.96 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="lg:col-span-5 flex justify-center lg:justify-end"
+          className="lg:col-span-5 flex justify-center lg:justify-end w-full"
           data-parallax-hero
         >
-          <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/10 shadow-2xl p-2.5 bg-gradient-to-b from-white/[0.04] to-transparent group">
+          <div className="relative w-full max-w-[280px] xs:max-w-xs sm:max-w-sm lg:max-w-md aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden glass-panel border border-white/10 shadow-2xl p-2 sm:p-2.5 bg-gradient-to-b from-white/[0.04] to-transparent group">
             {/* Inner Image Container */}
-            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center">
+            <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center">
               {!imgError ? (
                 <img
                   src="/assets/images/profile/IMG-20260112-WA0015.jpg"
@@ -224,10 +224,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <span
                 key={i}
-                className="font-marquee-display text-[clamp(2.25rem,4.5vw,4.25rem)] font-normal tracking-widest text-slate-100 uppercase pr-10 sm:pr-14 leading-none select-none shrink-0"
+                className="font-marquee-display text-[clamp(1.75rem,4.5vw,4.25rem)] font-normal tracking-widest text-slate-100 uppercase pr-8 sm:pr-14 leading-none select-none shrink-0"
                 style={{ fontFamily: '"Train One", cursive, sans-serif' }}
               >
-                MERN STACK DEVELOPER |
+                MERN STACK DEVELOPER
               </span>
             ))}
           </motion.div>

@@ -22,7 +22,7 @@ export const SkillsMatrix: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="relative py-10 sm:py-12 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 scroll-mt-20">
+    <section id="skills" className="relative py-10 sm:py-12 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 scroll-mt-20 w-full">
       {/* Section Header */}
       <div data-cinematic-header className="mb-7 sm:mb-8">
         <span data-cinematic-eyebrow className="text-xs font-mono text-brand-cyan uppercase tracking-widest block mb-2">
@@ -40,18 +40,18 @@ export const SkillsMatrix: React.FC = () => {
             key={cat.id}
             data-cinematic-card
           >
-            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-6 sm:p-7">
+            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-5 sm:p-7">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
-                  <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10">
+                  <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 shrink-0">
                     {categoryIcons[cat.id]}
                   </div>
-                  <h3 className="text-base font-display font-bold text-white tracking-tight">
+                  <h3 className="text-base font-display font-bold text-white tracking-tight break-words">
                     {cat.title}
                   </h3>
                 </div>
 
-                <p className="text-xs text-slate-400 font-sans mb-5 leading-relaxed">
+                <p className="text-xs text-slate-400 font-sans mb-5 leading-relaxed break-words">
                   {cat.description}
                 </p>
 

@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button';
 
 export const CredlyBadgesSection: React.FC = () => {
   return (
-    <section className="relative py-10 sm:py-12 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10">
+    <section className="relative py-10 sm:py-12 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 w-full">
       {/* Section Header */}
       <div data-cinematic-header className="mb-7 sm:mb-8">
         <span data-cinematic-eyebrow className="text-xs font-mono text-brand-cyan uppercase tracking-widest block mb-2">
@@ -25,23 +25,23 @@ export const CredlyBadgesSection: React.FC = () => {
             key={badge.id}
             data-cinematic-card
           >
-            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-6">
+            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-5 sm:p-6">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-xs font-mono text-brand-cyan uppercase tracking-wider">
+                  <span className="text-xs font-mono text-brand-cyan uppercase tracking-wider break-words">
                     {badge.issuer}
                   </span>
-                  <span className="text-[11px] font-mono text-slate-400 bg-white/[0.04] px-2 py-0.5 rounded-full border border-white/5">
+                  <span className="text-[11px] font-mono text-slate-400 bg-white/[0.04] px-2 py-0.5 rounded-full border border-white/5 shrink-0">
                     {badge.category}
                   </span>
                 </div>
 
-                <h3 className="text-base font-display font-bold text-white mb-2 tracking-tight">
+                <h3 className="text-base font-display font-bold text-white mb-2 tracking-tight break-words">
                   {badge.title}
                 </h3>
               </div>
 
-              <div className="pt-4 border-t border-white/8 flex items-center justify-between">
+              <div className="pt-4 border-t border-white/8 flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-1.5 text-xs text-brand-emerald font-mono">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Verified</span>

@@ -29,20 +29,20 @@ export const WhatIBring: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-10 sm:py-12 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10">
+    <section className="relative py-10 sm:py-12 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto z-10 w-full">
       <div data-cinematic-header className="mb-6 sm:mb-8">
         <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
           What I bring
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
         {cards.map((card) => (
           <div
             key={card.id}
             data-cinematic-card
           >
-            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-6 sm:p-7">
+            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-5 sm:p-7">
               <div>
                 <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center mb-5">
                   {card.icon}
