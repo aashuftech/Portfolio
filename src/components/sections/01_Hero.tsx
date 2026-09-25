@@ -227,7 +227,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isReady = true }) => {
                 className="font-marquee-display text-[clamp(2.25rem,4.5vw,4.25rem)] font-normal tracking-widest text-slate-100 uppercase pr-10 sm:pr-14 leading-none select-none shrink-0"
                 style={{ fontFamily: '"Train One", cursive, sans-serif' }}
               >
-                MERN STACK DEVELOPER
+                MERN STACK DEVELOPER |
               </span>
             ))}
           </motion.div>
