@@ -33,6 +33,7 @@ const config: Config = {
         display: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'monospace'],
+        poppins: ['"Poppins"', 'sans-serif'],
         baumans: ['"Baumans"', 'cursive', 'sans-serif'],
         train: ['"Train One"', 'cursive', 'sans-serif'],
       },

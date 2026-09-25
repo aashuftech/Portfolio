@@ -25,8 +25,25 @@ export const CredlyBadgesSection: React.FC = () => {
             key={badge.id}
             data-cinematic-card
           >
-            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-5 sm:p-6">
+            <BentoCard className="h-full flex flex-col justify-between border-white/8 hover:border-white/20 p-5 sm:p-6 group">
               <div>
+                {/* Square 1:1 Badge Image Area (~110-130px on desktop) */}
+                {badge.image && (
+                  <div className="flex items-center justify-center mb-4 sm:mb-5">
+                    <div
+                      className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-[120px] md:h-[120px] rounded-2xl p-2 flex items-center justify-center bg-white/[0.02] border border-white/8 group-hover:border-white/15 group-hover:bg-white/[0.04] transition-all duration-300"
+                      data-parallax-image
+                    >
+                      <img
+                        src={badge.image}
+                        alt={badge.title}
+                        className="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300 ease-out"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                )}
+
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <span className="text-xs font-mono text-brand-cyan uppercase tracking-wider break-words">
                     {badge.issuer}

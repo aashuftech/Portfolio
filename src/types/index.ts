@@ -70,6 +70,7 @@ export interface CredlyBadgeItem {
   issuer: string;
   verifyUrl: string;
   category: string;
+  image?: string;
 }
 
 export interface SkillCategoryGroup {
