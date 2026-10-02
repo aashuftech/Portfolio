@@ -174,4 +174,72 @@ export const projectsData: ProjectData[] = [
       ],
     },
   },
+  {
+  id: 'mistvale',
+  name: 'Mistvale Tea Co.',
+  tagline: 'Premium Tea E-Commerce Experience with Modern UX & Responsive Design',
+  description:
+    'Responsive vanilla JavaScript tea e-commerce website featuring product discovery, cart management, wishlist, recently viewed products, delivery checking and polished shopping interactions.',
+  category: 'Frontend / E-Commerce',
+  highlights: [
+    'Responsive tea e-commerce storefront built with HTML, CSS and vanilla JavaScript',
+    'Product search, category filtering and price/name sorting',
+    'Persistent cart with quantity and stock limits',
+    'Wishlist and recently viewed products using localStorage',
+    'Accessible Quick View modal with keyboard and focus support',
+    'Coupon, shipping and Indian currency calculation logic',
+    'Delivery pincode checker with serviceability and error states',
+    'Premium tea-leaf entrance animation and animated hero video',
+    'Responsive design tested across mobile, tablet and desktop viewports',
+    'SEO metadata, Open Graph, Twitter Cards and JSON-LD structured data',
+    'Accessibility-focused interactions with ARIA states and reduced-motion support',
+    'AI-assisted creation and refinement of product, hero and brand visual assets',
+  ],
+  stack: [
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'LocalStorage',
+    'SVG',
+    'Responsive Design',
+    'WebP',
+    'Vercel',
+  ],
+  githubUrl: 'https://github.com/aashuftech/Mistvale',
+  liveUrl: 'https://mistvaletea.vercel.app',
+  caseStudy: {
+    problem:
+      'The original tea storefront had multiple usability, functionality and visual issues, including unreliable cart behavior, inconsistent filtering and sorting, weak product interactions, unsupported marketing claims and an outdated visual presentation.',
+
+    solution:
+      'Reworked the storefront into a clean, responsive and premium tea shopping experience with reliable product discovery, persistent cart state, wishlist and recently viewed products, accessible Quick View interactions, delivery checking, coupon and shipping logic, and a refined Mistvale visual identity.',
+
+    architecture:
+      'Single-page frontend built with semantic HTML, CSS and vanilla JavaScript. Product data remains the source of truth for pricing and stock, while localStorage persists cart, wishlist and recently viewed state. The interface uses inline SVG icons, responsive CSS, accessible dialogs/drawers and client-side interaction logic without external JavaScript frameworks.',
+
+    keyHighlights: [
+      'Unified product search, category filtering and sorting while preventing asynchronous search race conditions.',
+      'Implemented persistent cart state with quantity limits, stock validation, sold-out handling, coupon calculations and shipping logic.',
+      'Added wishlist and recently viewed products with localStorage persistence and duplicate prevention.',
+      'Built an accessible Quick View modal with keyboard navigation, focus management and Escape-key support.',
+      'Implemented responsive cart and interaction patterns for mobile, tablet and desktop screens.',
+      'Added delivery pincode checking with valid, unserviceable and error states.',
+      'Added premium tea-leaf entrance animation and animated hero video while preserving the existing brand aesthetic.',
+      'Improved SEO with structured metadata, canonical URL, Open Graph, Twitter Cards and JSON-LD for products, FAQ and organization/store information.',
+      'Applied accessibility practices including visible focus states, ARIA attributes, keyboard navigation and reduced-motion support.',
+      'Optimized the visual experience using a restrained tea-inspired palette, Fraunces and Inter typography, responsive spacing and lightweight inline SVG icons.',
+    ],
+
+    techStackDetailed: [
+      'HTML5 (Semantic Page Structure)',
+      'CSS3 (Responsive Layout & Animations)',
+      'Vanilla JavaScript (Application Logic & Interactions)',
+      'LocalStorage (Cart, Wishlist & Recently Viewed Persistence)',
+      'Inline SVG (UI Icons & Lightweight Graphics)',
+      'WebP (Optimized Product & Brand Images)',
+      'Responsive Design (Mobile, Tablet & Desktop)',
+      'Vercel (Deployment)',
+    ],
+  },
+},
 ];
