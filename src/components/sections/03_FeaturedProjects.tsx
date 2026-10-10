@@ -26,6 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onSelectProje
     staynest: '/assets/images/projects/staynest.png',
     'codeintelligent-ai': '/assets/images/projects/codeintelligent.png',
     'mistvale': '/assets/images/projects/mistvale.png',
+    'formpulse': '/assets/images/projects/formpulse.png',
   };
 
   const imageSrc = imageMap[project.id] || `/assets/images/projects/${project.id}.png`;
