@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   email: 'ashuftech@gmail.com',
   github: 'https://github.com/aashuftech',
   linkedin: 'https://www.linkedin.com/in/aashish-prajapati-fullstack/',
-  resumeUrl: 'https://drive.google.com/file/d/1d_La3jta31AQq14fsf_YtghCuxo79oNi/view?usp=drive_link',
+  resumeUrl: 'https://drive.google.com/file/d/1bpxZMESgWTheqk4BW9aN2heVzijvOPfa/view?usp=drive_link',
   location: {
     city: 'India',
     country: 'Remote / Relocation Open',
